@@ -1,0 +1,81 @@
+<div class="modal-header">
+  <h4 class="modal-title">Detalhes do Veículo Cadastrado</h4>
+  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="modal-body">
+  <div class="container">
+    <form>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="valor">Valor:</label>
+            <input type="text" class="form-control" id="valor" name="valor" [(ngModel)]="resultadoConsulta.valor">
+          </div>
+          <div class="form-group">
+            <label for="marca">Marca:</label>
+            <input type="text" class="form-control" id="marca" name="marca" [(ngModel)]="resultadoConsulta.marca">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="modelo">Modelo:</label>
+            <input type="text" class="form-control" id="modelo" name="modelo" [(ngModel)]="resultadoConsulta.modelo">
+          </div>
+          <div class="form-group">
+            <label for="anoModelo">Ano Modelo:</label>
+            <input type="text" class="form-control" id="anoModelo" name="anoModelo" [(ngModel)]="resultadoConsulta.anoModelo">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="combustivel">Combustível:</label>
+            <input type="text" class="form-control" id="combustivel" name="combustivel" [(ngModel)]="resultadoConsulta.combustivel">
+          </div>
+          <div class="form-group">
+            <label for="codigoFipe">Código FIPE:</label>
+            <input type="text" class="form-control" id="codigoFipe" name="codigoFipe" [(ngModel)]="resultadoConsulta.codigoFipe">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="mesReferencia">Mês Referência:</label>
+            <input type="text" class="form-control" id="mesReferencia" name="mesReferencia" [(ngModel)]="resultadoConsulta.mesReferencia">
+          </div>
+          <div class="form-group">
+            <label for="tipoVeiculo">Tipo de Veículo:</label>
+            <input type="text" class="form-control" id="tipoVeiculo" name="tipoVeiculo" [(ngModel)]="resultadoConsulta.tipoVeiculo">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="siglaCombustivel">Sigla Combustível:</label>
+            <input type="text" class="form-control" id="siglaCombustivel" name="siglaCombustivel" [(ngModel)]="resultadoConsulta.siglaCombustivel">
+          </div>
+          <div class="form-group">
+            <label for="placa">Placa:</label>
+            <input type="text" class="form-control" id="placa" name="placa" [(ngModel)]="resultadoConsulta.placa">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="dataConsulta">Data da Consulta:</label>
+            <input type="text" class="form-control" id="dataConsulta" name="dataConsulta" [(ngModel)]="resultadoConsulta.dataConsulta">
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal-footer justify-content-between">
+  <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">Fechar</button>
+  <button type="button" class="btn btn-primary" (click)="atualizarVeiculo()">Atualizar</button>
+</div>

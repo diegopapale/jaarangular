@@ -1,0 +1,51 @@
+<div class="modal-header">
+  <h4 class="modal-title">Detalhes da Consulta FIPE</h4>
+  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<!-- ... (cabeçalho da modal) -->
+
+<div class="modal-body">
+  <dl class="row">
+
+    <dt class="col-sm-4">Valor:</dt>
+    <dd class="col-sm-8">{{ resultadoConsulta.valor }}</dd>
+
+    <dt class="col-sm-4">Marca:</dt>
+    <dd class="col-sm-8">{{ resultadoConsulta.marca }}</dd>
+
+    <dt class="col-sm-4">Modelo:</dt>
+    <dd class="col-sm-8">{{ resultadoConsulta.modelo }}</dd>
+
+    <dt class="col-sm-4">Ano Modelo:</dt>
+    <dd class="col-sm-8">{{ resultadoConsulta.anoModelo }}</dd>
+
+    <dt class="col-sm-4">Combustível:</dt>
+    <dd class="col-sm-8">{{ resultadoConsulta.combustivel }}</dd>
+
+    <dt class="col-sm-4">Código FIPE:</dt>
+    <dd class="col-sm-8">{{ resultadoConsulta.codigoFipe }}</dd>
+
+    <dt class="col-sm-4">Mês Referência:</dt>
+    <dd class="col-sm-8">{{ resultadoConsulta.mesReferencia }}</dd>
+
+    <dt class="col-sm-4">Tipo de Veículo:</dt>
+    <dd class="col-sm-8">{{ resultadoConsulta.tipoVeiculo }}</dd>
+
+    <dt class="col-sm-4">Sigla Combustível:</dt>
+    <dd class="col-sm-8">{{ resultadoConsulta.siglaCombustivel }}</dd>
+
+    <dt class="col-sm-4">Data da Consulta:</dt>
+    <dd class="col-sm-8">{{ resultadoConsulta.dataConsulta }}</dd>
+
+    <dt class="col-sm-4">Placa:</dt>
+    <dd class="col-sm-8">
+      <input type="text" class="form-control" [(ngModel)]="resultadoConsulta.placa">
+    </dd>
+  </dl>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="modal.dismiss()">Fechar</button>
+  <button type="button" class="btn btn-primary" (click)="incluirVeiculo()">Incluir</button>
+</div>
