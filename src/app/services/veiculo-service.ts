@@ -27,8 +27,8 @@ export class VeiculoService {
       );
   }
 
-  public consultaTabelaFipe(codigoFipe: string): Observable<any> {
-    return this.http.get<any>(`https://brasilapi.com.br/api/fipe/preco/v1/${codigoFipe}`)
+  public consultaTabelaFipe(codigoFipe: string, ano: number): Observable<any> {
+    return this.http.get<any>(`http://localhost:52000/api/fipe/preco/v1/${codigoFipe}?ano=${ano}`)
       .pipe(
         catchError(error => {
           this.openErrorModal('Erro ao consultar tabela FIPE. Verifique o código FIPE.');
